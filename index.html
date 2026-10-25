@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<title>Habitica</title>
+<meta name="description" content="Habitica: pengelola tugas dan kebiasaan dengan progres bergaya RPG. Bekerja offline.">
+<meta name="theme-color" content="#0d1618">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/app.css">
+<script src="js/theme-boot.js"></script>
+</head>
+<body>
+<a class="skip" href="#view">Lompat ke konten</a>
+<div class="shell">
+  <header class="topbar">
+    <a class="brand" href="#/today" aria-label="Habitica, ke halaman Hari ini"><img src="icons/logo.svg" alt="" width="32" height="32"><span>Habitica</span></a>
+    <div class="top-actions">
+      <span id="net-chip" class="chip warn" hidden>Offline</span>
+      <button id="level-chip" class="level-chip" type="button"><span id="lv-num">Lv 1</span><span class="xpbar" aria-hidden="true"><i id="xp-fill"></i></span><span id="xp-text" class="small"></span></button>
+      <button id="theme-btn" class="icon-btn" type="button" aria-label="Ganti tema">
+        <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button id="settings-btn" class="icon-btn" type="button" aria-label="Pengaturan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></button>
+    </div>
+  </header>
+  <div id="save-warn" class="banner err" role="alert" hidden>Tidak dapat menyimpan ke browser ini (penyimpanan penuh atau diblokir). Unduh cadangan dari Pengaturan sekarang.</div>
+  <div id="update-bar" class="banner" role="status" hidden><span>Versi baru tersedia.</span><button id="update-btn" class="btn primary" type="button">Perbarui</button></div>
+  <nav class="nav" aria-label="Navigasi utama">
+    <button type="button" data-nav="today"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></svg>Hari ini</button>
+    <button type="button" data-nav="tasks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>Tugas</button>
+    <button type="button" data-nav="habits"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.5-5.8L20 8M20 4v4h-4M20 12a8 8 0 0 1-13.5 5.8L4 16M4 20v-4h4"/></svg>Kebiasaan</button>
+    <button type="button" data-nav="progress"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-8M12 20V5M19 20v-11"/></svg>Progres</button>
+  </nav>
+  <main id="view" tabindex="-1"><noscript>Habitica membutuhkan JavaScript.</noscript></main>
+  <button id="fab" class="fab" type="button" aria-label="Tambah tugas atau kebiasaan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Tambah</button>
+</div>
+<div id="toasts" role="status" aria-live="polite"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
